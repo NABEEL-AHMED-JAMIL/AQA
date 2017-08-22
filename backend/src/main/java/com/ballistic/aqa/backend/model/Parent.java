@@ -1,5 +1,7 @@
 package com.ballistic.aqa.backend.model;
 
+import com.ballistic.aqa.backend.model.constant.Gender;
+
 import java.sql.Timestamp;
 import java.util.Set;
 
@@ -18,9 +20,12 @@ public class Parent extends User {
         super();
     }
 
-    public Parent(String email, String password, String fname, String lname, Timestamp dob, String phone, String mobile, Long id, Teacher teacher) {
-        super(email, password, fname, lname, dob, phone, mobile);
+    public Parent(Timestamp createdAt, Timestamp updatedAt, Timestamp lastLoginDate, String email, String password,
+                  String fname, String lname, Timestamp dob, String phone, String mobile, Boolean status,
+                  Gender gender, Long id, Set<Student> students, Teacher teacher) {
+        super(createdAt, updatedAt, lastLoginDate, email, password, fname, lname, dob, phone, mobile, status, gender);
         this.id = id;
+        this.students = students;
         this.teacher = teacher;
     }
 
@@ -42,9 +47,6 @@ public class Parent extends User {
 
     @Override
     public String toString() {
-        return "Parent{" +
-                "id=" + id +
-                ", teacher=" + teacher +
-                '}';
+        return "Parent{" + "id=" + id + ", teacher=" + teacher + '}';
     }
 }

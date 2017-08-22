@@ -3,6 +3,7 @@ package com.ballistic.aqa.backend.model;
 import com.ballistic.aqa.backend.model.constant.Gender;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 
 /**
@@ -12,6 +13,8 @@ public class Student extends User {
 
     private Long id;
     private Parent parent;
+    // this is used
+    private List<Subject> courses;
 
     public Student() {
         super();
