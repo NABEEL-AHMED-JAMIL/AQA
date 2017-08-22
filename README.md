@@ -8,3 +8,14 @@ This section contain the Angular-4 app which access all (ADMIN, DBA, USER)
 This section contain the Spring-boot app which is used for handle both the app (frontend + AQA_App)
 ## AQA_App
 This section contain the Angular-4 app which access all (ADMIN, DBA, USER)
+## Marge the branch's
+<ul>
+    <li>master</li>
+    <li>backend</li>
+    <li>frontend</li>
+    <li>AQA_App</li>
+</ul>
+git checkout master
+git pull origin master
+git merge branch name
+git push origin master
