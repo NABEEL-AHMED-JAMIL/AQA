@@ -15,7 +15,10 @@ This section contain the Angular-4 app which access all (ADMIN, DBA, USER)
     <li>frontend</li>
     <li>AQA_App</li>
 </ul>
-git checkout master
-git pull origin master
-git merge branch name
-git push origin master
+
+<ul>
+    <li>git checkout master</li>
+    <li>git pull origin master</li>
+    <li>git merge branch name</li>
+    <li>git push origin master</li>
+</ul>
