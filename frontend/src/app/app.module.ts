@@ -42,14 +42,6 @@ import { SharedModule } from './shared/shared.module';
 // hmr
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
-// login page
-import { PageLoginComponent } from './login-page/login/login.component';
-import { PageSignUpComponent } from './login-page/sign-up/sign-up.component';
-import { PageForgotPasswordComponent } from './login-page/forgot-password/forgot-password.component';
-import { PageConfirmEmailComponent } from './login-page/confirm-email/confirm-email.component';
-import { LoadingComponent } from './loading/loading.component';
-import { LoadingService } from './loading/loading.service';
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -64,14 +56,6 @@ import { LoadingService } from './loading/loading.service';
         SharedModule,
     ],
     declarations: [
-
-        // adding the login component
-        PageLoginComponent,
-        PageSignUpComponent,
-        PageForgotPasswordComponent,
-        PageConfirmEmailComponent,
-        LoadingComponent,
-
         AppComponent,
         // Layout
         LayoutComponent,
@@ -100,13 +84,11 @@ import { LoadingService } from './loading/loading.service';
         // Pages
         PageLayoutFullscreenComponent,
     ],
-    providers: [
-         LoadingService],
     bootstrap: [AppComponent]
 })
 
 export class AppModule {
-    constructor(public appRef: ApplicationRef) { }
+    constructor(public appRef: ApplicationRef) {}
     hmrOnInit(store) {
         console.log('HMR store', store);
     }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
+
 import { ExtraPagesRoutingModule } from './extra-pages-routing.module';
 
 import { PageLoginComponent } from './login/login.component';
@@ -10,15 +11,6 @@ import { Page500Component } from './500/500.component';
 import { PageConfirmEmailComponent } from './confirm-email/confirm-email.component';
 import { PageLockScreenComponent } from './lock-screen/lock-screen.component';
 import { PageMaintenanceComponent } from './maintenance/maintenance.component';
-
-
-let providers = {
-    "google": {
-        'clientId': "915758799202-2o1048kpv3s8qdmssbccs4gb54ge08cg.apps.googleusercontent.com"
-    }
-     
-};
-
 
 @NgModule({
     imports: [

@@ -5,8 +5,8 @@
                 <div class="logo">
                     <a [routerLink]="['/']">Login</a>
                 </div>
+
                 <form name="material_login_form" class="md-form-auth form-validation" ng-submit="submit()">
-                    
                     <fieldset>
                         <div class="form-group">
                             <md-input-container class="full-width md-icon-left">
@@ -29,9 +29,8 @@
                     <a [routerLink]="['/extra/sign-up']">Sign up</a>
                     <span class="divider-h"></span>
                     <a [routerLink]="['/extra/forgot-password']">Forgot your password?</a>
-                    <span class="divider-h"></span>
-                    <a href="javascript:;" (click)="signIn('google')">Sign In with Google</a>
                 </div>
+
             </div>
         </div>
     </div>
