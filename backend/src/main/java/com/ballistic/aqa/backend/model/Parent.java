@@ -13,7 +13,7 @@ public class Parent extends User {
 
     private Long id;
     private Set<Student> students;
-    private Teacher teacher;
+    private Employee employee;
 
 
     public Parent() {
@@ -22,11 +22,11 @@ public class Parent extends User {
 
     public Parent(Timestamp createdAt, Timestamp updatedAt, Timestamp lastLoginDate, String email, String password,
                   String fname, String lname, Timestamp dob, String phone, String mobile, Boolean status,
-                  Gender gender, Long id, Set<Student> students, Teacher teacher) {
+                  Gender gender, Long id, Set<Student> students, Employee employee) {
         super(createdAt, updatedAt, lastLoginDate, email, password, fname, lname, dob, phone, mobile, status, gender);
         this.id = id;
         this.students = students;
-        this.teacher = teacher;
+        this.employee = employee;
     }
 
     public Long getId() {
@@ -37,16 +37,16 @@ public class Parent extends User {
         this.id = id;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     @Override
     public String toString() {
-        return "Parent{" + "id=" + id + ", teacher=" + teacher + '}';
+        return "Parent{" + "id=" + id + ", employee=" + employee + '}';
     }
 }

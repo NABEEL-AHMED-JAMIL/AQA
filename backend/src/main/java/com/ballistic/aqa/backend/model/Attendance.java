@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 /**
  * Created by Lycus 01 on 8/22/2017.
  */
+// issue
 public class Attendance {
 
     private Long id;

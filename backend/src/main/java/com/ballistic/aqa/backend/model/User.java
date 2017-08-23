@@ -21,6 +21,7 @@ public abstract class User extends DatedModel {
     private String mobile;
     private Boolean status;
     private Gender gender;
+    private String address;
 
     //
 
