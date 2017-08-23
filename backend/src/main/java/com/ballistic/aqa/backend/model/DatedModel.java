@@ -1,10 +1,12 @@
 package com.ballistic.aqa.backend.model;
 
+import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
 /**
  * Created by Lycus 01 on 8/21/2017.
  */
+@MappedSuperclass
 public class DatedModel {
 
     // this create and update are not used in the parent section

@@ -10,6 +10,7 @@ import java.sql.Timestamp;
  */
 
 // user detail that need for the (parent, student, teacher)
+
 public abstract class User extends DatedModel {
 
     private String email;
