@@ -23,3 +23,4 @@ This section contain the Angular-4 app which access all (ADMIN, DBA, USER)
     <li>git push origin master</li>
 </ul>
 http://www.ozekisms.com/index.php?owpn=583
+https://medium.com/google-developer-experts/angular-2-animate-router-transitions-6de179e00204
