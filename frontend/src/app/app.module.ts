@@ -33,7 +33,6 @@ import { OpenSearchOverlaylDirective } from './layout/search-overlay/open-search
 
 // Pages
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageLayoutFullscreenComponent } from './page-layouts/fullscreen/fullscreen.component';
 
 // Sub modules
 import { LayoutModule } from './layout/layout.module';
@@ -81,8 +80,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
         OpenSearchOverlaylDirective,
         //
         DashboardComponent,
-        // Pages
-        PageLayoutFullscreenComponent,
+
     ],
     bootstrap: [AppComponent]
 })
