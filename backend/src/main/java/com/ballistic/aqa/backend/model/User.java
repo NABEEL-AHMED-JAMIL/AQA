@@ -2,6 +2,10 @@ package com.ballistic.aqa.backend.model;
 
 import com.ballistic.aqa.backend.model.constant.Gender;
 
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
 
@@ -11,142 +15,103 @@ import java.sql.Timestamp;
 
 // user detail that need for the (parent, student, teacher)
 
+@MappedSuperclass
 public abstract class User extends DatedModel {
 
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
+    @Column(name = "password", nullable = false)
     private String password;
-    private String fname;
-    private String lname;
+    @Column(name = "firstname", nullable = false)
+    private String firstname;
+    @Column(name = "lastname", nullable = false)
+    private String lastname;
+    @Column(name = "dob")
     private Timestamp dob;
+    @Column(name = "phone")
     private String phone;
+    @Column(name = "mobile")
     private String mobile;
-    private Boolean status;
+    @Column(name = "active")
+    private Boolean active;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
+    @Column(name = "address")
     private String address;
-
+    // this will be calculated after adding the dob
+    @Column(name = "age")
+    private Integer age;
     //
 
-    public User() {
-        super();
-    }
+
+    public User() { super(); }
 
     public User(Timestamp createdAt, Timestamp updatedAt, Timestamp lastLoginDate,
-                String email, String password, String fname, String lname, Timestamp dob,
-                String phone, String mobile, Boolean status, Gender gender) {
+                String email, String password, String firstname, String lastname,
+                Timestamp dob, String phone, String mobile, Boolean active,
+                Gender gender, String address, Integer age) {
         super(createdAt, updatedAt, lastLoginDate);
         this.email = email;
         this.password = password;
-        this.fname = fname;
-        this.lname = lname;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.dob = dob;
         this.phone = phone;
         this.mobile = mobile;
-        this.status = status;
+        this.active = active;
         this.gender = gender;
+        this.address = address;
+        this.age = age;
     }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() { return email; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) { this.email = email; }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setPassword(String password) { this.password = password; }
 
-    public String getFname() {
-        return fname;
-    }
+    public String getFirstname() { return firstname; }
 
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
+    public void setFirstname(String firstname) { this.firstname = firstname; }
 
-    public String getLname() {
-        return lname;
-    }
+    public String getLastname() { return lastname; }
 
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
+    public void setLastname(String lastname) { this.lastname = lastname; }
 
-    public Timestamp getDob() {
-        return dob;
-    }
+    public Timestamp getDob() { return dob; }
 
-    public void setDob(Timestamp dob) {
-        this.dob = dob;
-    }
+    public void setDob(Timestamp dob) { this.dob = dob; }
 
-    public String getPhone() {
-        return phone;
-    }
+    public String getPhone() { return phone; }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    public void setPhone(String phone) { this.phone = phone; }
 
-    public String getMobile() {
-        return mobile;
-    }
+    public String getMobile() { return mobile; }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
+    public void setMobile(String mobile) { this.mobile = mobile; }
 
-    public Boolean getStatus() { return status; }
+    public Boolean getActive() { return active; }
 
-    public void setStatus(Boolean status) { this.status = status; }
+    public void setActive(Boolean active) { this.active = active; }
 
     public Gender getGender() { return gender; }
 
     public void setGender(Gender gender) { this.gender = gender; }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public String getAddress() { return address; }
 
-        User user = (User) o;
+    public void setAddress(String address) { this.address = address; }
 
-        if (!email.equals(user.email)) return false;
-        if (!password.equals(user.password)) return false;
-        if (!fname.equals(user.fname)) return false;
-        if (!lname.equals(user.lname)) return false;
-        if (!dob.equals(user.dob)) return false;
-        if (!phone.equals(user.phone)) return false;
-        if (!mobile.equals(user.mobile)) return false;
-        if (!status.equals(user.status)) return false;
-        return gender == user.gender;
+    public Integer getAge() { return age; }
 
-    }
-
-    @Override
-    public int hashCode() {
-        int result = email.hashCode();
-        result = 31 * result + password.hashCode();
-        result = 31 * result + fname.hashCode();
-        result = 31 * result + lname.hashCode();
-        result = 31 * result + dob.hashCode();
-        result = 31 * result + phone.hashCode();
-        result = 31 * result + mobile.hashCode();
-        result = 31 * result + status.hashCode();
-        result = 31 * result + gender.hashCode();
-        return result;
-    }
+    public void setAge(Integer age) { this.age = age; }
 
     @Override
     public String toString() {
-        return "User{" + "email='" + email + '\'' + ", password='" + password + '\'' +
-                ", fname='" + fname + '\'' + ", lname='" + lname + '\'' +
-                ", dob=" + dob + ", phone='" + phone + '\'' + ", mobile='" + mobile + '\'' +
-                ", status=" + status + ", gender=" + gender + '}';
+        return "User{" + "email='" + email + '\'' + ", password='" + password + '\'' + ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' + ", dob=" + dob + ", phone='" + phone + '\'' + ", mobile='" + mobile + '\'' +
+                ", active=" + active + ", gender=" + gender + ", address='" + address + '\'' + ", age=" + age + '}';
     }
 }
