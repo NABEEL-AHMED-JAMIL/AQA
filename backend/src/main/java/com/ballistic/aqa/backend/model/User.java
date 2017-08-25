@@ -16,6 +16,7 @@ import java.sql.Timestamp;
 // user detail that need for the (parent, student, teacher)
 
 @MappedSuperclass
+@EntityListeners(UserListener.class)
 public abstract class User extends DatedModel {
 
     @Column(name = "email", nullable = false, unique = true)
