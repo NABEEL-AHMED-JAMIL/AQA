@@ -29,4 +29,5 @@ https://medium.com/google-developer-experts/angular-2-animate-router-transitions
 <ul>
 <li>ng g c component name</li>
 <li>ng g s Service name</li>
+<li>npm install --save firebase agularfire2</li>
 </ul>
