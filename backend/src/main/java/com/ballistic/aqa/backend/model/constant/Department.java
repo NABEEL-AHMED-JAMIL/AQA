@@ -6,9 +6,10 @@ package com.ballistic.aqa.backend.model.constant;
 public enum Department {
 
     // used for the both teacher and the other stafe also the student
-    ELECTRONICS_ENGINEERING("Electronics and Telecommunication Enginerring"), INFORMATION_TECHNOLOGY(
-            "Information Technology"), CIVIL_ENGINEERING("Civil Engineering"), ELECTRICAL_ENGINEERING(
-            "Electrical Engineering and Power");
+    ELECTRONICS_ENGINEERING("Electronics and Telecommunication Enginerring"),
+    INFORMATION_TECHNOLOGY("Information Technology"),
+    CIVIL_ENGINEERING("Civil Engineering"),
+    ELECTRICAL_ENGINEERING("Electrical Engineering and Power");
 
     private String deptName;
 

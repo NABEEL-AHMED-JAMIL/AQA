@@ -36,6 +36,7 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
     "jquery-slimscroll": "^1.3.8",
+    "redux": "^3.7.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.0",
     "webfontloader": "^1.6.27",
