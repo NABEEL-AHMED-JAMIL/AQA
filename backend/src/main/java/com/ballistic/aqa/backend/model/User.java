@@ -2,10 +2,7 @@ package com.ballistic.aqa.backend.model;
 
 import com.ballistic.aqa.backend.model.constant.Gender;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 
@@ -16,7 +13,6 @@ import java.sql.Timestamp;
 // user detail that need for the (parent, student, teacher)
 
 @MappedSuperclass
-@EntityListeners(UserListener.class)
 public abstract class User extends DatedModel {
 
     @Column(name = "email", nullable = false, unique = true)
